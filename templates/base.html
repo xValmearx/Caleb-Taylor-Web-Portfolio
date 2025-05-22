@@ -1,0 +1,19 @@
+{%load static%}
+
+<!Doctype html>
+<html>
+  <head>
+    <link rel = "stylesheet" href = "{% static 'css/Main.css' %}">
+    <meta charset = "utf-8">
+    <title>
+      {% block title %}
+      App Name Here
+      {% endblock title %}
+    </title>
+  </head>
+  <body>
+      {% block content %}
+      {% endblock content %}
+  </body>
+</script>
+</html>

@@ -1,0 +1,133 @@
+<!Doctype html>
+{% extends "base.html" %}
+ 
+
+
+ {% block content %}
+
+<div class="wrapper">
+  <img src="/static/img/cool_tone.jpg" class="background">
+
+  <header>
+    <h1 class="title">Welcome!</h1>
+  </header>
+
+      <section>
+        <h3>programming languages </h2>
+        <ul>
+          <li>Python</li>
+          <li>SQL</li>
+          <li>HTML & CSS</li>
+       </ul>
+       </section>
+    
+
+       <section>
+        <h3>Projects</h3>
+        <a href="https://github.com/xValmearx/sample-social-media-" target="_blank">github</a>
+        <p>Created a Social media page that allows users to create, update, and delete their posts, and can also review and comment on other posts. </p>
+
+
+
+        <div class = "image-container">
+          <div class = "popup-image">
+                <img src="/static/img/login.png" alt="">
+                </div>
+          <table>
+            <tr>
+              <td><div class = "image"><img src="/static/img/login.png"></div></td>
+              <td><div class = "image"><img src="/static/img/main.png"></div></td>
+              <td><div class = "image"><img src="/static/img/private.png"></div></td>
+              <td><div class = "image"><img src="/static/img/Public.png"></div></td>
+            </tr>
+
+          </table>
+    
+          
+
+        </div>
+
+
+
+        <p>Created an admin to-do page for a corporate setting, this page allows other admins to create and receive tickets that they can complete and fill out. </p>
+      </section>
+      
+       <section>
+        <h3>Work Experience </h3>
+        <p>Hard Lines Associate: Walmart, Oct 2021 -  Current</p>
+        <ul>
+          <li>Utilize store software to locate store inventory and provide product knowledge</li>
+          <li>Provide technical expertise to help customers make informed electronic purchases </li>
+          <li>Trained 10 coworkers to use store-specific software and hardware effectively</li>
+          <li>Able to tailor training to coworkers’ needs </li>
+        </ul>
+       </section>
+
+       <section>
+        <h3>Contact Informantion</h3>
+
+        <div style="
+        justify-items: center;">
+
+            <table>
+              <tr>
+                <td>Phone: (269) 929 6313</td>
+              </tr>
+              <tr>
+                <td>
+                  Email: calebs.phone2017@gmail.com
+                </td>
+              </tr>
+            </table>
+
+            <br>
+            <table>
+                <td style="padding: 10px;">
+                  <button><a href="https://www.linkedin.com/in/caleb-taylor-b85230353/" target="_blank">
+                    <img src="/static/img/LinkedIn.jpg" style="width: 100px;"></a>
+                  </button>
+                </td>
+                <td>
+                  <button><a href="https://github.com/xValmearx" target="_blank">
+                    <img src="/static/img/Github.png" style="width: 100px;"></a>
+                  </button>
+                </td>
+              </tr>
+            </table>
+        </div>
+       </section>
+
+       <section>
+        <footer>
+          &#xA9; Caleb Taylor 2025
+       </footer>
+       </section>
+       
+
+    
+ 
+</div>
+
+<script>
+  document.querySelectorAll('.image-container img').forEach(image =>{
+    image.onclick = () => {
+      document.querySelector('.popup-image').style.display = 'block';
+      document.querySelector('.popup-image img').src = image.getAttribute('src');
+    }
+
+    });
+
+    document.querySelector('.popup-image span').onclick = () => {
+      document.querySelector('.popup-image').style.display = 'none';
+    };
+
+    const movingDiv = document.querySelector('.popup-image');
+
+    window.addEventListener('scroll', () => {
+      scrollY = window.scrollY;
+      movingDiv.style.top = `50 + scrollY px`; // Adjusts the top position
+    });
+
+</script>
+
+ {% endblock content %}
