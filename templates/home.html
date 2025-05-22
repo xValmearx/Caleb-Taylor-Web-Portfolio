@@ -42,13 +42,20 @@
             </tr>
 
           </table>
-    
-          
 
+        <div class = "image-container">
+          <div class = "popup-image">
+                <img src="/static/admin_ticket-home.png" alt="">
+                </div>
+          <table>
+            <tr>
+              <td><div class = "image"><img src="/static/admin_ticket-home.png"></div></td>
+              <td><div class = "image"><img src="/static/admin_ticket-groups.png"></div></td>
+              <td><div class = "image"><img src="/static/admin_ticket-tickets.png"></div></td>
+              <td><div class = "image"><img src="/static/admin_ticket-admin-home.png"></div></td>
+            </tr>
+          </table>
         </div>
-
-
-
         <p>Created an admin to-do page for a corporate setting, this page allows other admins to create and receive tickets that they can complete and fill out. </p>
       </section>
       
@@ -120,13 +127,6 @@
     document.querySelector('.popup-image span').onclick = () => {
       document.querySelector('.popup-image').style.display = 'none';
     };
-
-    const movingDiv = document.querySelector('.popup-image');
-
-    window.addEventListener('scroll', () => {
-      scrollY = window.scrollY;
-      movingDiv.style.top = `50 + scrollY px`; // Adjusts the top position
-    });
 
 </script>
 
